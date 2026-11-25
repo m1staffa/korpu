@@ -1,0 +1,32 @@
+:root{--bg:#12201f;--card:#1a2d2b;--line:#2d4744;--text:#edf5f1;--dim:#a9c0b9;--acc:#f2b84b;--ink:#241a05;--bad:#f08a78;--w:1080px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 "Segoe UI",system-ui,sans-serif;overflow-wrap:break-word}
+a{color:inherit}:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;z-index:9;background:var(--acc);color:var(--ink);padding:8px 14px}
+nav{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:26px;padding:12px max(20px,calc((100vw - var(--w))/2));background:var(--bg);border-bottom:1px solid var(--line)}
+nav a{text-decoration:none;color:var(--dim)}nav a:hover{color:var(--text)}nav .logo{font-weight:700;font-size:21px;color:var(--text);margin-right:auto}
+.btn,nav .btn{display:inline-block;background:var(--acc);color:var(--ink);font-weight:700;text-decoration:none;padding:15px 28px;border-radius:10px}
+.btn:hover,nav .btn:hover{background:#ffd07a;color:var(--ink)}.btn.small{padding:7px 18px}
+section{max-width:var(--w);margin:auto;padding:72px 20px 0}
+h1,h2{line-height:1.12;text-wrap:balance;letter-spacing:-.02em}h1{font-size:clamp(38px,5.6vw,66px);margin:0;max-width:20ch}h2{font-size:clamp(28px,3.6vw,40px);margin:0 0 28px}h3{margin:0 0 6px;font-size:20px}
+.lead{font-size:clamp(18px,2vw,22px);color:var(--dim);max-width:46ch;margin:22px 0 28px}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin:0}.cta span{color:var(--dim)}
+.bridge{display:block;width:100%;margin-top:24px}
+.arc,.deck,.cables{fill:none;stroke:var(--acc);stroke-linecap:round}.arc{stroke-width:9}.deck{stroke-width:5}.cables{stroke-width:2;opacity:.55}
+.pc rect{fill:var(--card);stroke:var(--text);stroke-width:4}.pc path{stroke:var(--text);stroke-width:5;stroke-linecap:round}.pc text{fill:var(--text);font-size:23px;text-anchor:middle;font-weight:600}
+.dot{fill:var(--text);offset-path:path("M150 218C290 28 710 28 850 218");animation:go 4s ease-in-out infinite alternate}
+@keyframes go{from{offset-distance:4%}to{offset-distance:96%}}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0 0 40px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.steps li{counter-increment:s;border-top:4px solid var(--acc);padding-top:16px}.steps h3::before{content:counter(s) ". ";color:var(--acc)}p{margin:0 0 14px}.steps p,dd,figcaption{color:var(--dim)}
+figure{margin:0}img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:12px}figcaption{font-size:15px;margin-top:10px}
+.feat{margin:0}.feat div{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--line)}dt{font-weight:700;font-size:20px}dd{margin:0;max-width:62ch}
+.two{display:grid;grid-template-columns:1.35fr 1fr;gap:36px;align-items:center}.badge img{border-radius:4px}.two ul{padding-left:20px;margin:26px 0 0}.two li{margin-bottom:10px}
+kbd{border:1px solid var(--dim);border-bottom-width:3px;border-radius:6px;padding:1px 7px;font:600 14px "Segoe UI",sans-serif}
+.warn{margin:36px 0 0;padding:18px 22px;background:#33211d;border-radius:12px}.warn b{color:var(--bad)}
+details{border-top:1px solid var(--line);padding:16px 0}summary{cursor:pointer;font-weight:600;font-size:19px}details p{color:var(--dim);max-width:66ch;margin:10px 0 0}
+.get{margin-top:80px;max-width:none;background:var(--card);padding:64px max(20px,calc((100vw - var(--w))/2 + 20px))}
+.hash{color:var(--dim);margin:22px 0 0;font-size:15px}code{display:block;color:var(--text);font:14px/1.5 Consolas,monospace;overflow-wrap:anywhere;user-select:all}
+footer{padding:26px max(20px,calc((100vw - var(--w))/2 + 20px));color:var(--dim);font-size:15px;background:var(--card);border-top:1px solid var(--line)}
+@media(max-width:760px){nav a:not(.logo):not(.btn){display:none}section{padding-top:52px}.steps,.two{grid-template-columns:1fr}.feat div{grid-template-columns:1fr;gap:4px}.pc text{font-size:26px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.dot{animation:none;offset-distance:50%}}

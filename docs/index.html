@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Körpü: dostun kompüterinə uzaqdan qoşul</title>
+<meta name="description" content="Körpü dostlar arasında ekran paylaşmaq və kompüteri uzaqdan idarə etmək üçün pulsuz Windows proqramıdır.">
+<meta name="theme-color" content="#12201f">
+<meta property="og:title" content="Körpü">
+<meta property="og:description" content="Dostun kompüterinə ID ilə qoşul. Vaxt limiti yoxdur.">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#esas">Məzmuna keç</a>
+<nav aria-label="Əsas"><a class="logo" href="#">Körpü</a>
+  <a href="#nece">Necə işləyir</a><a href="#tehlukesizlik">Təhlükəsizlik</a><a href="#suallar">Suallar</a><a class="btn small" href="#yukle">Yüklə</a></nav>
+
+<main id="esas">
+<section class="hero">
+  <h1>Dostunun kompüterinə körpü sal</h1>
+  <p class="lead">ID-ni yaz, dostun qəbul etsin, ekranını gör və icazə versə, idarə et. Vaxt limiti yoxdur.</p>
+  <p class="cta"><a class="btn" href="https://github.com/m1staffa/korpu/releases/latest/download/Korpu-0.1.1-Windows.zip">Windows üçün yüklə</a><span>0.1.1 · 103 MB · quraşdırmasız</span></p>
+  <svg class="bridge" viewBox="0 0 1000 300" role="img" aria-label="İki kompüter arasında körpü">
+    <path class="cables" d="M200 218V180M260 218V141M320 218V112M380 218V92M440 218V80M500 218V76M560 218V80M620 218V92M680 218V112M740 218V141M800 218V180"/>
+    <path class="arc" d="M150 218C290 28 710 28 850 218"/><path class="deck" d="M40 218H960"/>
+    <circle class="dot" r="7"/>
+    <g class="pc"><rect x="50" y="130" width="130" height="82" rx="8"/><path d="M90 230h50"/><text x="115" y="178">Sən</text></g>
+    <g class="pc"><rect x="820" y="130" width="130" height="82" rx="8"/><path d="M860 230h50"/><text x="885" y="178">Dostun</text></g>
+  </svg>
+</section>
+
+<section id="nece">
+  <h2>Üç addım</h2>
+  <ol class="steps">
+    <li><h3>Yüklə və aç</h3><p>ZIP-i çıxar, <b>Korpu-Portativ</b> faylını aç. Quraşdırma və qeydiyyat yoxdur.</p></li>
+    <li><h3>Açarı bir dəfə yaz</h3><p><b>Ayarlar → Server açarı</b> yerinə səni dəvət edən dostun verdiyi açarı yapışdır.</p></li>
+    <li><h3>ID ilə qoşul</h3><p>Dostunun 9 rəqəmli ID-sini yaz və <b>Qoşul</b> bas. O, qəbul edəndə ekranı görünür.</p></li>
+  </ol>
+  <figure><img src="img/ana.png" width="1599" height="1026" loading="lazy" alt="Körpünün ana pəncərəsi: solda öz ID-niz, sağda dostun ID-si üçün sahə"><figcaption>Ana pəncərə: solda sənin ID-n, sağda dostununku.</figcaption></figure>
+</section>
+
+<section>
+  <h2>Nə edə bilir</h2>
+  <dl class="feat">
+    <div><dt>Ekran</dt><dd>Dostunun ekranını canlı göstərir. Bir neçə monitor varsa, birini seçmək olur.</dd></div>
+    <div><dt>İdarə</dt><dd>Siçan və klaviatura. Windows administrator proqramları üçün ayrıca rejim var.</dd></div>
+    <div><dt>Fayl</dt><dd>Faylı pəncərəyə at, dostun qəbul etsin. <b>Yükləmələr\Korpu</b> qovluğuna düşür.</dd></div>
+    <div><dt>Söhbət</dt><dd>Sessiya zamanı yazışmaq üçün yan panel.</dd></div>
+    <div><dt>Birbaşa yol</dt><dd>Mümkün olanda görüntü iki kompüter arasında birbaşa gedir. Alınmayanda şifrəli şəkildə serverdən ötürülür.</dd></div>
+  </dl>
+</section>
+
+<section id="tehlukesizlik">
+  <h2>Son söz ekranın sahibinindir</h2>
+  <div class="two">
+    <figure><img src="img/icaze.png" width="1599" height="1026" loading="lazy" alt="İcazə pəncərəsi: Aysel qoşulmaq istəyir, idarə icazəsi söndürülüdür"><figcaption>Hər qoşulma soruşulur, idarə icazəsi əvvəlcə söndürülüdür.</figcaption></figure>
+    <div>
+      <figure class="badge"><img src="img/nisan.png" width="711" height="90" loading="lazy" alt="Nişan: Aysel idarə edir, İdarəni dayandır və Kəs düymələri"><figcaption>Sessiya boyu ekranda qalan nişan.</figcaption></figure>
+      <ul><li><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>F12</kbd> sessiyanı dərhal kəsir.</li>
+      <li>Ekran, idarə, söhbət və fayllar WebRTC ilə şifrələnir.</li>
+      <li>Gələn hər fayl üçün ayrıca icazə lazımdır.</li>
+      <li>Bağlantı üçün Google STUN serverindən də istifadə olunur, o, IP ünvanını görür.</li></ul>
+    </div>
+  </div>
+  <p class="warn"><b>Dələduzlardan qorun.</b> Özünü bank, polis və ya texniki dəstək kimi təqdim edən adamın sorğusunu qəbul etmə. Yalnız şəxsən tanıdığın adama icazə ver.</p>
+</section>
+
+<section id="suallar">
+  <h2>Suallar</h2>
+  <details><summary>Server açarını haradan alım?</summary><p>Körpü indi dostlar üçün qapalı serverlə işləyir. Açarı səni dəvət edən adam şəxsi mesajla verir.</p></details>
+  <details><summary>Windows niyə xəbərdarlıq edir?</summary><p>Proqramın hələ rəqəmsal imzası yoxdur. Faylı yalnız bu saytdan yüklə və aşağıdakı SHA-256 kodunu tutuşdur. Kod fərqlidirsə, açma.</p></details>
+  <details><summary>Görüntü donur, nə edim?</summary><p>Ekranını paylaşan tərəfdə kabel və ya 5 GHz Wi-Fi işlət, böyük yükləmələri dayandır. Yuxarıda göstərilən gecikmə (ms) nə qədər azdırsa, o qədər yaxşıdır.</p></details>
+  <details><summary>Telefonda və Mac-də işləyir?</summary><p>Hələlik yalnız 64 bit Windows 10 və 11 üçündür.</p></details>
+  <details><summary>Tünd Windows təsdiq pəncərəsini idarə etmək olur?</summary><p>Yox. Həmin pəncərəni kompüterin sahibi özü təsdiqləməlidir.</p></details>
+  <details><summary>Bir ekrana neçə nəfər baxa bilər?</summary><p>Hələlik eyni anda bir nəfər.</p></details>
+</section>
+
+<section id="yukle" class="get">
+  <h2>Körpünü yüklə</h2>
+  <p>Sınaq versiyasıdır, pulsuzdur. Windows 10/11, 64 bit.</p>
+  <p class="cta"><a class="btn" href="https://github.com/m1staffa/korpu/releases/latest/download/Korpu-0.1.1-Windows.zip">Korpu-0.1.1-Windows.zip</a><span>103 MB</span></p>
+  <p class="hash">SHA-256<code id="sha">55784902ccb0fe02592366604aad402078d6f5298ce2aaa594f014c36f311334</code></p>
+  <p class="hash">Yoxlamaq üçün PowerShell-də<code>Get-FileHash .\Korpu-0.1.1-Windows.zip</code></p>
+</section>
+</main>
+<footer>Körpü 0.1.1. Bu sayt kuki və izləmə kodu işlətmir.</footer>
+</body>
+</html>
