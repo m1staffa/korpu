@@ -15,7 +15,7 @@ Dostunun kompüterinə ID ilə qoşul, ekranını gör və icazə versə, idarə
 Proqram rəqəmsal imzasızdır, Windows xəbərdarlıq göstərə bilər. Yalnız buradan yüklə və kodu tutuşdur:
 
 ```text
-SHA-256: 573ddf95143f66b64d512f9028b60e4e064fd0ca399b792a026a6e18a9b5df7e
+SHA-256: a82123beda81e3d6268d0cec873adcf46162019486315313360b1563e2e61b6d
 ```
 
 Tanımadığın adamın qoşulma sorğusunu qəbul etmə. Sessiyanı dərhal kəsmək: **Ctrl+Shift+F12**.
